@@ -4,6 +4,94 @@
     padding: 0;
 }
 
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
 .promo {
     height: 800px;
+    background: url('../img/bg/main_bg.jpg') center center/cover no-repeat;
+    padding: 38px 0 61px;
+}
+
+.logo {
+    margin-bottom: 53px;
+}
+
+.logo .logo__img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 9.5px;
+}
+
+.logo .logo__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 41px;
+    line-height: 41px;
+    text-transform: uppercase;
+    color: #F9BF3B;
+    text-align: center;
+}
+
+.title__big {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 80px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20.5px 0;
+}
+
+h2.title {
+    margin-bottom: 22.5px;
+}
+
+.promo .promo__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0 13px;
+    margin-bottom: 72px;
+}
+
+.promo .promo__text span {
+    font-weight: bold;
+    color: #F9BF3B;
+}
+
+.promo .promo__btn {
+    padding: 24px 15px;
+    display: block;
+    margin: 0 auto;
+    background: linear-gradient(0deg, #2798B9 0%, #3AB6DA 100%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border: none;
+
+    font-family: Roboto Condensed;
+    font-size: 21px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.22);
 }
