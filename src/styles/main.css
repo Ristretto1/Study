@@ -160,7 +160,10 @@ a.button.button--linkedin:active {
   border: 1px solid #eeeeee;
   border-radius: 2px;
   padding-left: 5px;
+  padding-top: 12px;
   color: #2a4a5c;
+  font-size: 12px;
+  box-sizing: border-box;
 }
 
 .inputs__wrapper input:focus {
