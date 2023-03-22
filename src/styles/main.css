@@ -1,0 +1,259 @@
+@font-face {
+  font-family: 'Barlow';
+  src: local('Barlow'), url('../fonts/roboto.otf') format('otf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #eff6ff;
+  color: #2a4a5c;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+label {
+  cursor: pointer;
+}
+
+.overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #ffffff;
+  width: 1010px;
+  height: 700px;
+  display: flex;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+.img__wrapper {
+  background-image: url(../img/bg.jpg);
+  background-size: contain;
+  width: 576px;
+  padding: 30px 35px;
+}
+
+.img__wrapper img {
+  width: 100px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  padding-top: 80px;
+}
+
+.content__wrapper h1 {
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+.content__wrapper .description {
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 38px;
+  color: #7b8a92;
+}
+
+.buttons__wrapper {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+a.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 172px;
+  height: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 10px;
+  position: relative;
+}
+
+.button__logo {
+  width: 12px;
+  position: absolute;
+  left: 9px;
+}
+
+a.button.button--facebook {
+  background-color: #255a9b;
+}
+
+a.button.button--facebook:hover {
+  background-color: #204e87;
+}
+
+a.button.button--facebook:active {
+  background-color: #1a4271;
+}
+
+a.button.button--linkedin {
+  background-color: #0076b6;
+}
+
+a.button.button--linkedin:hover {
+  background-color: #01679e;
+}
+
+a.button.button--linkedin:active {
+  background-color: #005887;
+}
+
+.divider {
+  font-size: 8px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.divider span {
+  position: relative;
+}
+
+.divider span::after {
+  content: '';
+  width: 70px;
+  height: 1px;
+  background-color: #eeeeee;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.divider span::before {
+  content: '';
+  width: 70px;
+  height: 1px;
+  background-color: #eeeeee;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.inputs__wrapper {
+  margin-bottom: 43px;
+  display: flex;
+  gap: 23px;
+}
+
+.inputs__wrapper input {
+  height: 38px;
+  width: 170px;
+  border: 1px solid #eeeeee;
+  border-radius: 2px;
+  padding-left: 5px;
+  color: #2a4a5c;
+}
+
+.inputs__wrapper input:focus {
+  outline: none;
+  border: 1px solid #e0e0e0;
+  box-shadow: -3px 0px 0 0px #3698fb;
+}
+
+.input__wrapper {
+  position: relative;
+}
+
+.input__placeholder {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 9px;
+  color: #cfcfcf;
+}
+
+h2 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+fieldset.radio {
+  border: none;
+  margin-bottom: 32px;
+}
+
+legend.radio__title {
+  font-size: 10px;
+  margin-bottom: 34px;
+  color: #7b8a92;
+}
+
+.radio__wrapper {
+  gap: 33px;
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.radio__label {
+  font-size: 12px;
+  display: flex;
+  gap: 7px;
+}
+
+.radio__description {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  font-size: 10px;
+  width: 180px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.checkbox__label {
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #7b8a92;
+}
+
+.checkbox__label a {
+  color: #3698fb;
+}
+
+.checkbox__label a:hover {
+  background-color: #318be5;
+}
+
+.checkbox__label a:active {
+  background-color: #2b78c5;
+}
+
+.form__button {
+  border: none;
+  color: #ffffff;
+  background-color: #3698fb;
+  margin-top: 40px;
+  padding: 9px 45px;
+  font-size: 11px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: #318be5;
+}
+
+.form__button:active {
+  background-color: #2b78c5;
+}

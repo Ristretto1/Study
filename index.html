@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <title>Kata.WebCore 1.1</title>
+</head>
+
+<body>
+    <div class="overflow">
+        <div class="modal">
+            <div class="img__wrapper">
+                <img src="./src/img/logo.svg" alt="company logotype">
+            </div>
+            <div class="content">
+                <div class="content__wrapper">
+                    <h1>Get iintoo it today</h1>
+                    <span class="description">There is no charge or obligation upon registration.</span>
+                    <div class="buttons__wrapper">
+                        <a href="http://facebook.com/" class="button button--facebook">
+                            <img src="./src/img/facebook.svg" alt="facebook logo" class="button__logo">
+                            Register with Facebook
+                        </a>
+                        <a href="http://linkedln.com/" class="button button--linkedin">
+                            <img src="./src/img/linkedin.svg" alt="linkedin logo" class="button__logo">
+                            Register with LinkedIn
+                        </a>
+                    </div>
+                    <div class="divider"><span>OR</span></div>
+                    <form>
+                        <div class="inputs__wrapper">
+                            <div class="input__wrapper">
+                                <span class="input__placeholder">Email</span>
+                                <input type="text" class="input--email">
+                            </div>
+                            <div class="input__wrapper">
+                                <span class="input__placeholder">Phone</span>
+                                <input type="text" class="input--phone">
+                            </div>
+                        </div>
+                        <h2>What type of investor are you?</h2>
+                        <fieldset class="radio">
+                            <legend class="radio__title">Select the type of investor you are below.</legend>
+                            <div class="radio__wrapper">
+                                <label class="radio__label">
+                                    <input type="radio" name="type" value="Individual" checked>
+                                    Individual
+                                </label>
+                                <label class="radio__label">
+                                    <input type="radio" name="type" value="Business">
+                                    Business
+                                </label>
+                                <label class="radio__label">
+                                    <input type="radio" name="type" value="IRA">
+                                    IRA
+                                </label>
+                                <label class="radio__label">
+                                    <input type="radio" name="type" value="Trust">
+                                    Trust
+                                </label>
+                            </div>
+                            <div class="radio__description">
+                                I am a natural person investing on my own behalf as a sole owner, joint tenant, or
+                                tenant in
+                                common.
+                            </div>
+                        </fieldset>
+                        <label class="checkbox__label">
+                            <input type="checkbox" name="is agree with terms">
+                            I agree to the terms and receiving notifications from iintoo <a href="#">View full terms</a>
+                        </label>
+                        <button class="form__button" type="submit">Create Account</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
