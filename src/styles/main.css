@@ -64,7 +64,7 @@ label {
   font-size: 14px;
   display: inline-block;
   margin-bottom: 38px;
-  color: #7b8a92;
+  color: #afafaf;
 }
 
 .buttons__wrapper {
@@ -196,7 +196,7 @@ fieldset.radio {
 legend.radio__title {
   font-size: 10px;
   margin-bottom: 34px;
-  color: #7b8a92;
+  color: #afafaf;
 }
 
 .radio__wrapper {
@@ -242,7 +242,7 @@ legend.radio__title {
   display: flex;
   align-items: center;
   gap: 4px;
-  color: #7b8a92;
+  color: #afafaf;
 }
 
 .checkbox__label a {
