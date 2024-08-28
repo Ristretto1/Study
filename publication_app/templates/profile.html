@@ -8,34 +8,22 @@
     <title>Личный профиль</title>
 </head>
 <body>
-<section class="main">
-    <div class="profile-card">
-        <div class="image">
-            <!--<img src="images/profile.jpg" alt="" class="profile-pic">-->
-        </div>
-        <div class="data">
-            <h2>Olivia Gomez</h2>
-            <span>Developer & Designer</span>
-        </div>
-        <div class="row">
-            <div class="info">
-                <h3>Following</h3>
-                <span>120</span>
-            </div>
-            <div class="info">
-                <h3>Followers</h3>
-                <span>5000</span>
-            </div>
-            <div class="info">
-                <h3>Posts</h3>
-                <span>209</span>
-            </div>
-        </div>
-        <div class="buttons">
-            <a href="#" class="btn">Message</a>
-            <a href="#" class="btn">Follow Me</a>
-        </div>
-    </div>
-</section>
+
+<div>Username: {{ user.username }}</div>
+<div>Email: {{ user.email }}</div>
+<div>First name: {{ user.first_name }}</div>
+<div> Last name: {{ user.last_name }}</div>
+
+<form action="/profile/" method="post">
+    {% csrf_token %}
+    {{ profile_form }}
+    <button type="submit">Изменить</button>
+</form>
+    
+<hr>
+
+<a href="/posts/">Страница с постами</a>
+<a href="/logout/">Выйти из профиля</a>
+
 </body>
 </html>
