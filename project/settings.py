@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_spectacular',
     'publication_app',
-    'media_app'
+    'media_app',
+    'tags_app'
 ]
 
 MIDDLEWARE = [
