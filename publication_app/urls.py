@@ -1,5 +1,6 @@
-from django.urls import path
+from django.urls import path, include
 
+from publication_app.api.views.router import api_router
 from publication_app.views.login import LoginView
 from publication_app.views.logout import LogoutView
 from publication_app.views.posts import PostsView
@@ -12,4 +13,6 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name='login'),
     path('profile/', ProfileView.as_view(), name='profile'),
     path('logout/', LogoutView.as_view(), name='logout'),
+
+    path('api/', include(api_router.urls)),
 ]

@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.db.models import DateField
 
@@ -9,3 +10,4 @@ class Post(models.Model):
     created_at = DateField(auto_now_add=True)
     is_public = models.BooleanField(default=True)
     image = models.ImageField(upload_to='media/', blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.PROTECT, related_name='posts')
