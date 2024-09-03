@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from media_app.api.serializers.media import MediaSerializer
 from publication_app.models import Post
 
 
@@ -17,4 +18,4 @@ class PostSerializer(serializers.ModelSerializer):
     )
 
     # media = serializers.URLField(source='file.file.url', read_only=True)
-    # media = MediaSerializer(source='file', allow_null=False, read_only=True)
+    media = MediaSerializer(source='file', allow_null=False, read_only=True)
