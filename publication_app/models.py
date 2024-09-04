@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
+from django.core.serializers import serialize
 from django.db import models
 from django.db.models import DateField
+from rest_framework import serializers
 
 from media_app.models import Media
 
@@ -13,3 +15,7 @@ class Post(models.Model):
     is_public = models.BooleanField(default=True)
     file = models.ForeignKey(Media, on_delete=models.CASCADE, null=True, blank=True, related_name='posts')
     user = models.ForeignKey(User, on_delete=models.PROTECT, related_name='posts')
+    comments = serializers.SerializerMethodField()
+
+    def get_comments(self, instance):
+        return instance.comments.all()
