@@ -15,6 +15,7 @@ urlpatterns = [
     path('', include('media_app.urls')),
     path('', include('tags_app.urls')),
     path('', include('comments_app.urls')),
+    path('', include('likes_app.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

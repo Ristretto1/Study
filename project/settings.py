@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'publication_app',
     'media_app',
     'tags_app',
-    'comments_app'
+    'comments_app',
+    'likes_app'
 ]
 
 MIDDLEWARE = [
