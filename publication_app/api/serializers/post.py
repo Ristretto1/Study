@@ -1,7 +1,6 @@
 from rest_framework import serializers
 
 from comments_app.api.serializers.comment import CommentDetailSerializer
-from likes_app.api.serializers.like import LikeSerializer
 from media_app.api.serializers.media import MediaSerializer
 from publication_app.models import Post
 
@@ -24,5 +23,6 @@ class PostSerializer(serializers.ModelSerializer):
     comments = CommentDetailSerializer(many=True, allow_null=False, read_only=True)
     likes = serializers.SerializerMethodField()
 
-    def get_likes(self, instance):
+    @staticmethod
+    def get_likes(instance):
         return instance.likes.count()

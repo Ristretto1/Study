@@ -16,5 +16,6 @@ class TagDetailSerializer(serializers.ModelSerializer):
 
     posts_count = serializers.SerializerMethodField()
 
-    def get_posts_count(self, instance):
+    @staticmethod
+    def get_posts_count(instance):
         return instance.posts.count()

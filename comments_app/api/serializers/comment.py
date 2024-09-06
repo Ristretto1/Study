@@ -14,12 +14,25 @@ class CommentSerializer(serializers.ModelSerializer):
         source='user'
     )
 
+    likes = serializers.SerializerMethodField()
+
+    @staticmethod
+    def get_likes(instance) -> int:
+        return instance.likes.count()
+
+
 class CommentDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         exclude = ['post']
 
-        publisher_user = serializers.HiddenField(
-            default=serializers.CurrentUserDefault(),
-            source='user'
-        )
+    publisher_user = serializers.HiddenField(
+        default=serializers.CurrentUserDefault(),
+        source='user'
+    )
+
+    likes = serializers.SerializerMethodField()
+
+    @staticmethod
+    def get_likes(instance) -> int:
+        return instance.likes.count()
