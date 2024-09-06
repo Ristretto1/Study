@@ -9,3 +9,4 @@ class Comment(models.Model):
     text = models.TextField()
     post = models.ForeignKey(Post, on_delete=models.CASCADE, null=False, blank=False, related_name='comments')
     user = models.ForeignKey(User, on_delete=models.PROTECT, null=False, blank=False, related_name='comments')
+    who_liked = models.ManyToManyField(User, blank=True, related_name='liked_comments')

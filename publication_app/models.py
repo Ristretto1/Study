@@ -13,3 +13,4 @@ class Post(models.Model):
     is_public = models.BooleanField(default=True)
     file = models.ForeignKey(Media, on_delete=models.CASCADE, null=True, blank=True, related_name='posts')
     user = models.ForeignKey(User, on_delete=models.PROTECT, related_name='posts')
+    who_liked = models.ManyToManyField(User, blank=True, related_name='liked_posts')

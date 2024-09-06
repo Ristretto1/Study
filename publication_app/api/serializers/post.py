@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from comments_app.api.serializers.comment import CommentDetailSerializer
 from media_app.api.serializers.media import MediaSerializer
+from project.api.serializers.user import UserSerializer
 from publication_app.models import Post
 
 
@@ -22,6 +23,7 @@ class PostSerializer(serializers.ModelSerializer):
     media = MediaSerializer(source='file', allow_null=False, read_only=True)
     comments = CommentDetailSerializer(many=True, allow_null=False, read_only=True)
     likes = serializers.SerializerMethodField()
+    who_liked = UserSerializer(many=True, read_only=True)
 
     @staticmethod
     def get_likes(instance):

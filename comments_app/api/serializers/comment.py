@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from comments_app.models import Comment
+from project.api.serializers.user import UserSerializer
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -15,6 +16,7 @@ class CommentSerializer(serializers.ModelSerializer):
     )
 
     likes = serializers.SerializerMethodField()
+    who_liked = UserSerializer(many=True, read_only=True)
 
     @staticmethod
     def get_likes(instance) -> int:
